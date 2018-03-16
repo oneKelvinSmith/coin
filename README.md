@@ -20,7 +20,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+> encrypted = Coin.encrypt(plaintext: 'secret')
+=> {
+      :data  => "\xA9704\xEDy",
+      :key   => "\x9A\x04*=\x1E\x971uH9T\xDE2\x82A\xBAwH^\xDB\x15\x1D\xF1\x96\xD5V&]\xB9\xD4\x8F\xD5",
+      :nonce => "\xC7\x93xn\xC3\x85\x87\xB3s{\x0E\xF7",
+      :tag   => "\x9Dxs\a0;\xA8\x96\xC3\x03\x9C\x1D \xCE\xB1\x06"
+   }
+> Coin.decrypt(encrypted)
+=> {:plaintext=>"secret"}
+```
 
 ## Development
 
