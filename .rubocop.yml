@@ -1,0 +1,13 @@
+AllCops:
+  TargetRubyVersion: 2.2
+Style/Documentation:
+  Enabled: false
+Layout/SpaceInLambdaLiteral:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - '**/spec/**/*.rb'
+    - '**/*_spec.rb'
